@@ -1,0 +1,8 @@
+{
+  "name": "slopscope-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"format": "prettier --write src/slopscope_web/static/*.js src/slopscope_web/static/*.html"},
+  "devDependencies": {"prettier": "3.6.2", "playwright": "1.56.1"}
+}
