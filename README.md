@@ -166,20 +166,14 @@ including GitHub Pages. Direct WebUSB needs Chrome/Edge and the user's explicit
 USB-device permission. Python bridge mode runs locally through the firmware
 repo's included USB package.
 
-The private source repo is [wocsor/slopscope-web](https://github.com/wocsor/slopscope-web).
-The public viewer is configured for https://wocsor.github.io/slopscope-web/.
-Hosting is not live yet: GitHub rejected Pages activation because the account's
-current plan does not support Pages for private repos. GitHub Pro or another
-eligible plan is needed to keep this arrangement.
+The [public viewer](https://wocsor.github.io/slopscope-web/) is hosted on GitHub
+Pages from [wocsor/slopscope-web](https://github.com/wocsor/slopscope-web).
+Changes to the viewer on `main` deploy automatically through the **Publish viewer**
+workflow; it can also be run manually from the Actions tab.
 
-After upgrading, open the repo's **Settings → Pages** and select **GitHub Actions**
-as the source, then run **Publish viewer** from the Actions tab. Later changes to
-the viewer on `main` deploy automatically. The workflow publishes only the static
-viewer files and MIT license. It needs no deployment secret or Python server.
-
-Repository privacy and website privacy are separate. This site will be public;
-its deployed HTML and JavaScript will be downloadable even though the source repo
-is private. Scope data stays in the browser or local Python bridge.
+The workflow publishes only the static viewer files and MIT license. It needs no
+deployment secret or Python server. Scope data stays in the browser or local
+Python bridge.
 
 ## License
 
