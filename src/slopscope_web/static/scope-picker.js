@@ -7,6 +7,7 @@ export function setupScopePicker({
 }) {
   const picker = document.getElementById("scopepicker");
   const refreshButton = document.getElementById("scoperefresh");
+  const pickerLabel = picker.closest("label");
   let switching = false,
     refreshing = false;
 
@@ -34,6 +35,7 @@ export function setupScopePicker({
           ? getState().serial_number
           : picker.value;
       }
+      pickerLabel.hidden = refreshButton.hidden = devices.length < 2;
       const signature = JSON.stringify([devices, selected]);
       picker.disabled = switching || isBusy() || devices.length === 0;
       if (picker.dataset.devices === signature) return;

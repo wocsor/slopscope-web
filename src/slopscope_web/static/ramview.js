@@ -266,7 +266,9 @@ function updateControls() {
   $("run").setAttribute("aria-pressed", String(s.running && !single));
   $("trigsingle").textContent =
     single && s.running ? "Single armed" : "Single shot";
-  $("usb").textContent = `DEAF:BABE · ${s.usb_speed || ""}`;
+  $("usb").textContent = s.usb_speed
+    ? `USB · ${s.usb_speed}`
+    : "Waiting for USB";
   setValue("slowmode", s.roll?.mode ? "LIVE" : "TRIGGERED");
   $("recordprogress").textContent = rec.running
     ? `${rec.stage || "Acquiring"} · ${(rec.elapsed_s || 0).toFixed(1)} s elapsed. Controls remain available; changing acquisition cancels this record.`

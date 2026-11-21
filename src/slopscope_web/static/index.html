@@ -417,13 +417,13 @@
       <header>
         <h1>SlopScope <small>Live waveform viewer</small></h1>
         <div class="row">
-          <label class="scope-picker"
+          <label class="scope-picker" hidden
             >Scope
             <select id="scopepicker" aria-label="Scope serial number">
               <option value="">Detecting scopes…</option>
             </select>
           </label>
-          <button id="scoperefresh" type="button">Refresh scopes</button>
+          <button id="scoperefresh" type="button" hidden>Refresh scopes</button>
           <button id="usbconnect" type="button">Connect USB</button
           ><button id="usbmode" type="button" hidden>Use WebUSB</button>
           <div class="status" id="connection">
@@ -1302,7 +1302,7 @@
           </details>
           <div class="card">
             <h2>Connection</h2>
-            <div id="usb" class="caption">DEAF:BABE · waiting</div>
+            <div id="usb" class="caption">Waiting for USB</div>
             <p class="caption" id="transporthelp">
               Frames are checked by CRC before drawing.
             </p>
